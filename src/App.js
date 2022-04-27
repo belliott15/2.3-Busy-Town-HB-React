@@ -21,7 +21,7 @@ function App() {
       <div className="fight">
         <div className="monster">
           {/* the width of the alien should be ten times whatever the alien size is in state */}
-          <img src="alien.png" width={10 * alienSize} />
+          <img src="alien.png" width={alienSize * 10} />
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
             <button onClick={() => setAlienSize(alienSize + monsterModifier)}>Oh no! The alien is gobblin up all the electricity!</button>
@@ -31,7 +31,7 @@ function App() {
         </div>
         <div className="monster">
           {/* the width of the lizard should be ten times whatever the alien size is in state */}
-          <img src="lizard.png" width={10 * lizardSize} />
+          <img src="lizard.png" width={lizardSize * 10} />
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
             <button onClick={() => setLizardSize(lizardSize + monsterModifier)}>Yegads! The lizard is ramping up to its final form!</button>
@@ -54,7 +54,7 @@ function App() {
       This prop should be an array of strings like ['car', 'truck', 'truck', 'car', 'bus'].
       Do you have something like that in state that you could pass as a vehicles prop? 
       */}
-      <VehicleList />
+      <VehicleList Vehicle={traffic}/>
       <div className='buttons'>
         {/* This part is weird */}
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'car' to the end */}
