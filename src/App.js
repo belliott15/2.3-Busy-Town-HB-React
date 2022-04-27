@@ -12,7 +12,7 @@ function App() {
   // alienSize should be a number that starts out as 10
   const [alienSize, setAlienSize] = useState(10);
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
-  const [traffic, setTraffic] = useState([]);
+  const [traffic, setTraffic] = useState(['car', 'truck']);
 
   const monsterModifier = 1;
 
@@ -45,7 +45,7 @@ function App() {
         {/* when you click this button, the color of the light in state should be set to 'red' */}
         <button onClick={() => setLightColor('red')}>Red</button>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
-        <button onClick={() => setLightColor('yellow')}>Yellow</button>
+        <button onClick={() => {setLightColor('yellow'); traffic.splice(0, 1); setTraffic([...traffic]);}}>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
         <button onClick={() => {setLightColor('green'); traffic.splice(0, 3); setTraffic([...traffic]);}}>Green</button>
       </div>
