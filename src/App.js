@@ -1,6 +1,6 @@
 import './App.css';
 import VehicleList from './VehicleList';
-import TrafficLight from './TrafficLight';
+// import TrafficLight from './TrafficLight';
 
 function App() {
   // track the following state with a few useState hooks:
@@ -33,7 +33,7 @@ function App() {
           </div>
         </div>
       </div>
-      <TrafficLight color={lightColor} />
+      {/* <TrafficLight color={lightColor} /> */}
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
         <button>Red</button>
