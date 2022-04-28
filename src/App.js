@@ -24,9 +24,9 @@ function App() {
           <img src="alien.png" width={alienSize * 10} />
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
-            <button onClick={() => setAlienSize(alienSize + monsterModifier)}>Oh no! The alien is gobblin up all the electricity!</button>
+            <button onClick={() => { alienSize < 25 ? setAlienSize(alienSize + monsterModifier) : setAlienSize(alienSize - monsterModifier);}}>Oh no! The alien is gobblin up all the electricity!</button>
             {/* when you click this button, the lizard's size in state should go down by one */}
-            <button onClick={() => setLizardSize(lizardSize - monsterModifier)}>Amazing! The alien zapped the lizard!</button>
+            <button onClick={() => { lizardSize > 1 ? setLizardSize(lizardSize - monsterModifier) : setLizardSize(lizardSize + monsterModifier);}}>Amazing! The alien zapped the lizard!</button>
           </div>
         </div>
         <div className="monster">
@@ -34,9 +34,9 @@ function App() {
           <img src="lizard.png" width={lizardSize * 10} />
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
-            <button onClick={() => setLizardSize(lizardSize + monsterModifier)}>Yegads! The lizard is ramping up to its final form!</button>
+            <button onClick={() => { lizardSize < 30 ? setLizardSize(lizardSize + monsterModifier) : setLizardSize(lizardSize - monsterModifier);}}>Yegads! The lizard is ramping up to its final form!</button>
             {/* when you click this button, the alien's size in state should go up by one */}
-            <button onClick={() => setAlienSize(alienSize - monsterModifier)}>Oh my! The lizard chomped down on the alien!</button>
+            <button onClick={() => { alienSize > 1 ? setAlienSize(alienSize - monsterModifier) : setAlienSize(alienSize + monsterModifier);}}>Oh my! The lizard chomped down on the alien!</button>
           </div>
         </div>
       </div>
