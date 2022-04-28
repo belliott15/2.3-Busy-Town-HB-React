@@ -35,6 +35,7 @@ function App() {
             </button>
           </div>
         </div>
+        <img id='vslogo' src='./vsImage.png'/>
         <div className="monster">
           {/* the width of the lizard should be ten times whatever the alien size is in state */}
           <img src="lizard.png" width={lizardSize * 10} />
